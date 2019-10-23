@@ -14,11 +14,13 @@ const withTemplate = WrappedComponent => {
      }
      render() {
          return (
-           <main>
+           <React.Fragment>
              <Header />
+             <main className="container">
                <WrappedComponent {...this.props} {...this.callbacks} />
+               </main>
              <Footer />
-           </main>
+           </React.Fragment>
          )
      }
   }
