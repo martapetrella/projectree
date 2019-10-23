@@ -1,0 +1,27 @@
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+
+#Redirect to HTTPS
+#RewriteEngine On
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://www.%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+# Redirect to HTTPS ONLY IF NOT LOCALHOST
+# RewriteEngine On
+# RewriteCond %{HTTPS} On
+# RewriteCond %{HTTP_HOST} !^localhost [NC]
+# RewriteCond %{REMOTE_ADDR} !^127\.0\.0\.1$
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^[^.]+\.[^.]+$
+RewriteCond %{HTTPS}s ^on(s)|
+RewriteCond %{HTTP_HOST} !^localhost [NC]
+RewriteCond %{REMOTE_ADDR} !^127\.0\.0\.1$
+RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+ErrorDocument 404 /404.html
