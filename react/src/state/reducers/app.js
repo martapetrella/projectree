@@ -66,7 +66,7 @@ const initialState = {
             deadline: '20200615', // default: business goals deadline
             estimate_effort: '2min',
             real_effort: '2min',
-            work_on_it: 0, // 0: pause; 1: I work on it now --> so your boss will know that you are now preparing his coffee right now
+            work_on_it: 0, // 0: pause; 1: I work on it now --> so your boss will know that you are preparing his coffee right now
             owner: 'John Doe', // who will do this task?
             creator: 'John Doe', // who created this task?
             tester: 'John Doe', // who will test this task?
