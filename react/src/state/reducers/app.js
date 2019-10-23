@@ -17,7 +17,7 @@ const initialState = {
         phone: '55512345',
         role: 'Account',
         note: 'Lorem ipsum',
-        alternative_contact: 'Luigi Bianchi', // name of another customer's contact if is not avaiable
+        alternative_contact: 'Luigi Bianchi', // name of another customer's contact if not avaiable
       }],
     },
     team: [{
@@ -36,7 +36,7 @@ const initialState = {
           document: {
             name: '',
             content: '', // text saved in db, alternative to "link". Example: README file
-            link: '', // link to the file, alternative to "content". Example: PFD of a presentation
+            link: '', // link to the file, alternative to "content". Example: PDF of a presentation
           }
         }]
       }
@@ -73,7 +73,7 @@ const initialState = {
             dependences: 'Buy coffe', // Dependences of another task
             comments: [], // the conversation about the task
             status: 'todo', // todo / blocked / waiting for feedbacks / to test / released / won't fix
-            commit_sha: '', // for git! :) 
+            commit_sha: '', // for git! :)
             test_env: [
               { // get the envoirments list and ckeck if the test is done
                 name: 'develop',
