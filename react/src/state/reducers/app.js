@@ -88,7 +88,7 @@ const initialState = {
                 description: '', // if the dev needs to explain somethings to tester
                 status: 'to test', // to test / passed / rejected
                 note: '', // the tester explain what happens
-                comments: [], // the conversation about the test
+                // comments: [], // the conversation about the test
               }
             ]
           }
