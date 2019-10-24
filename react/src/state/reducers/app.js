@@ -63,13 +63,15 @@ const initialState = {
           {
             name: 'Make a coffee for your boss',
             description: 'Press the coffe button and that\'s all',
-            deadline: '20200615', // default: business goals deadline
+            deadline: '20200615', // default: business goals deadline. REQUIRED for Meeting event
             estimate_effort: '2min',
             real_effort: '2min',
             work_on_it: 0, // 0: pause; 1: I work on it now --> so your boss will know that you are preparing his coffee right now
             owner: 'John Doe', // who will do this task?
             creator: 'John Doe', // who created this task?
             tester: 'John Doe', // who will test this task?
+            type: 'task', // task / bug / enhancment / meeting
+            invited: 'Mario Rossi', // only for Meeting task.
             dependences: 'Buy coffe', // Dependences of another task
             comments: [], // the conversation about the task
             status: 'todo', // todo / blocked / waiting for feedbacks / to test / released / won't fix
