@@ -65,14 +65,15 @@ const initialState = {
             description: 'Press the coffe button and that\'s all',
             type: 'task', // task / bug / enhancment / test / meeting
             deadline: '20200615', // default: business goals deadline. REQUIRED for Meeting event
-            estimate_effort: '2min',
-            real_effort: '2min',
-            recoursive: 'every day at 9:00 am', // only for test and meeting task type
+            estimate_effort: '2min', // only for task / bug / enhancment / test type
+            real_effort: '2min', // only for task / bug / enhancment / test type
+            recoursive: 'every day at 9:00 am', // only for test and meeting type
             work_on_it: 0, // 0: pause; 1: I work on it now --> so your boss will know that you are preparing his coffee right now
             owner: 'John Doe', // who will do this task?
             creator: 'John Doe', // who created this task?
             tester: 'John Doe', // who will test this task?
-            invited: 'Mario Rossi', // only for Meeting task.
+            invited: 'Mario Rossi', // only for Meeting type.
+            meeting_notes: '', // only for Meeting type. To quickly write down the decisions made in the meeting
             dependences: 'Buy coffe', // Dependences of another task
             comments: [], // the conversation about the task
             status: 'todo', // todo / blocked / waiting for feedbacks / to test / released / won't fix
