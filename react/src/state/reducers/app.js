@@ -63,6 +63,7 @@ const initialState = {
           {
             name: 'Make a coffee for your boss',
             description: 'Press the coffe button and that\'s all',
+            priority: '1', // 1 to 5
             type: 'task', // task / bug / enhancment / test / meeting
             deadline: '20200615', // default: business goals deadline. REQUIRED for Meeting event
             estimate_effort: '2min',
