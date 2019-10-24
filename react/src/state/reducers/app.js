@@ -79,7 +79,8 @@ const initialState = {
             comments: [], // the conversation about the task
             status: 'todo', // todo / blocked / waiting for feedbacks / to test / released / won't fix
             commit_sha: '', // for git! :)
-            attachment: '', // screenshots, etc...
+            attachments: [], // screenshots, etc...
+            tags: [],
             test_env: [
               { // get the envoirments list and ckeck if the test is done
                 name: 'develop',
